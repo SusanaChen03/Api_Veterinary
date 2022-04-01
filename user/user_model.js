@@ -5,9 +5,6 @@ const User = connection.define("Users", {
   name: {
     type: DataTypes.STRING,
   },
-  surname: {
-    type: DataTypes.STRING,
-  },
   phoneNumber: {
     type: DataTypes.STRING,
   },
