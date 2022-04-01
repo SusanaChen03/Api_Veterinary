@@ -20,7 +20,6 @@ module.exports.createUser = async (req, res) => {
   try {
     const newUser = {
       name: req.body.name,
-      surName: req.body.surName,
       phoneNumber: req.body.phoneNumber,
       email: req.body.email,
       password: req.body.password,
@@ -103,7 +102,6 @@ module.exports.createAdmin = async (req, res) => {
   try {
     const newAdmin = {
       name: req.body.name,
-      surName: req.body.surName,
       phoneNumber: req.body.phoneNumber,
       email: req.body.email,
       password: req.body.password,
