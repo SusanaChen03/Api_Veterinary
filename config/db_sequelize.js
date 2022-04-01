@@ -7,7 +7,7 @@ const connection = new Sequelize(
   process.env.USER_DB,
   process.env.PASS_DB,
   {
-    host: process.env.PASS_DB,
+    host: process.env.HOST_DB,
     dialect: "mysql",
   }
 );
