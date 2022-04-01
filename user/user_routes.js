@@ -4,7 +4,7 @@ const router = express.Router();
 const controller = require("./user_controller.js");
 const verification = require("../config/middlewares.js");
 
-router.post("/admin", verification("admin"), controller.crearAdmin);
+router.post("/admin", verification("admin"), controller.createAdmin);
 router.get("/", verification(), controller.getUser);
 router.post("/", verification(), controller.createUser);
 router.post("/login", controller.login);

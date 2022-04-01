@@ -99,9 +99,9 @@ module.exports.deleteUser = async (req, res) => {
   }
 };
 
-module.exports.crearAdmin = async (req, res) => {
+module.exports.createAdmin = async (req, res) => {
   try {
-    const nuevoAdmin = {
+    const newAdmin = {
       name: req.body.name,
       surName: req.body.surName,
       phoneNumber: req.body.phoneNumber,
@@ -110,8 +110,8 @@ module.exports.crearAdmin = async (req, res) => {
       role: req.body.role,
     };
 
-    const adminCreado = await User.create(nuevoAdmin);
-    res.status(201).json(adminCreado);
+    const adminCreated = await User.create(newAdmin);
+    res.status(201).json(adminCreated);
   } catch (error) {
     res.json(error + "error");
   }
