@@ -3,11 +3,11 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const connection = new Sequelize(
-  process.env.HEROKU_NAME_DB,
-  process.env.HEROKU_USER,
-  process.env.HEROKU_PASS,
+  process.env.NAME_DB,
+  process.env.USER_DB,
+  process.env.PASS_DB,
   {
-    host: process.env.HEROKU_HOST,
+    host: process.env.PASS_DB,
     dialect: "mysql",
   }
 );

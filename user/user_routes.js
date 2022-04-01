@@ -6,7 +6,7 @@ const verification = require("../config/middlewares.js");
 
 router.post("/admin", verification("admin"), controller.createAdmin);
 router.get("/", verification(), controller.getUser);
-router.post("/", verification(), controller.createUser);
+router.post("/", controller.createUser);
 router.post("/login", controller.login);
 router.post("/logout", controller.logout);
 router.patch("/:id", verification("admin"), controller.modifyUser);
