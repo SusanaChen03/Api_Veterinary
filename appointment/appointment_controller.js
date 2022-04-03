@@ -25,7 +25,7 @@ module.exports.filterAppointment = async (req, res) => {
       where: {
         [Sequelize.Op.and]: {
           idPet: req.query.idPet,
-          fechaDeVisita: { [Sequelize.Op.gte]: new Date() },
+          date: { [Sequelize.Op.gte]: new Date() },
         },
       },
     });
@@ -39,9 +39,10 @@ module.exports.filterAppointment = async (req, res) => {
 module.exports.createAppointment = async (req, res) => {
   try {
     const newAppointment = {
-      tratamiento: req.body.tratamiento,
-      fechaDeVisita: req.body.fechaDeVisita,
+      treatment: req.body.treatment,
+      date: req.body.date,
       idPet: req.body.idPet,
+      idProfessional: req.body.idProfessional,
     };
 
     const createdAppointment = await Appointment.create(newAppointment);
