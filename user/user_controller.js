@@ -44,8 +44,8 @@ module.exports.login = async (req, res) => {
         { role: findUser.role, id: findUser.id },
         process.env.JWT_KEY
       );
-
-      res.json(ficha);
+       let objResponse = { token:ficha, iduser:findUser.id};
+      res.json(objResponse);
     } else {
       res.status(401).send("User no founded");
     }
