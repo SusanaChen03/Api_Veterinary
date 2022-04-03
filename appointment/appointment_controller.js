@@ -42,7 +42,7 @@ module.exports.createAppointment = async (req, res) => {
       treatment: req.body.treatment,
       date: req.body.date,
       idPet: req.body.idPet,
-      idProfessional: req.body.idProfessional,
+      professional: req.body.professional,
     };
 
     const createdAppointment = await Appointment.create(newAppointment);

@@ -5,8 +5,8 @@ const Appointment = connection.define("Appointment", {
   idPet: {
     type: DataTypes.INTEGER,
   },
-  idProfessional: {
-    type: DataTypes.INTEGER,
+  professional: {
+    type: DataTypes.STRING,
   },
   date: {
     type: DataTypes.DATE,
