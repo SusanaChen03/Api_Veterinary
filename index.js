@@ -3,7 +3,7 @@ const app = express();
 const usRouter = require("./user/user_routes.js");
 const dotenv = require("dotenv");
 const peRouter = require("./pet/pet_router.js");
-const appointmentRouter = require("./appointment/appointment_model.js");
+const appointmentRouter = require("./appointment/appointment_router.js");
 const  cors = require('cors');
 
 dotenv.config();
