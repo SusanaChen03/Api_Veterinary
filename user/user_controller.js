@@ -1,5 +1,6 @@
 const User = require("./user_model.js");
 const jwt = require("jsonwebtoken");
+require("../config/relations.js");
 
 
 module.exports.getUser = async (req, res) => {

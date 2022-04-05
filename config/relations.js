@@ -2,6 +2,7 @@ const Users = require("../user/user_model.js");
 const Pet = require("../pet/pet_model.js");
 const Appointment = require("../appointment/appointment_model.js");
 
+Users.hasMany(Pet, {foreignKey: "idUser" });
 Pet.belongsTo(Users, { foreignKey: "idUser" });
 
 Pet.hasMany(Appointment, { foreignKey: "idPet" });

@@ -1,6 +1,7 @@
 const Appointment = require("./appointment_model.js");
 const Pet = require("../pet/pet_model.js");
 const connection = require ("../config/db_sequelize.js")
+require("../config/relations.js");
 
 const { Sequelize, DataTypes } = require("sequelize");
 
