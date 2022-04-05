@@ -5,7 +5,21 @@ require("../config/relations.js");
 
 const { Sequelize, DataTypes } = require("sequelize");
 
-module.exports.listAppointment = async (req, res) => {
+
+module.exports.listAppointment= async (req,res) => {
+
+  try {
+    const list = await Appointment.findAll({
+      where: {
+        idPet: req.query.idPet,
+      },
+    });
+    res.json(list);
+  } catch (error) {
+    res.json(error + "error");
+  }
+};
+/*module.exports.listAppointment = async (req, res) => {
   try {
     const list = await Appointment.findAll({
       include: [{ model: Pet }],
@@ -17,7 +31,7 @@ module.exports.listAppointment = async (req, res) => {
   } catch (error) {
     res.json(error + "error");
   }
-};
+};*/
 
 module.exports.filterAppointment = async (req, res) => {
   try {

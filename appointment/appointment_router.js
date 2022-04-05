@@ -3,6 +3,7 @@ const router = express.Router();
 const controller = require("./appointment_controller.js");
 const verification = require("../config/middlewares.js");
 
+//router.get("/list", controller.listAppointment);
 router.get("/list", controller.listAppointment);
 router.get("/", controller.filterAppointment);
 router.post("/", controller.createAppointment);
