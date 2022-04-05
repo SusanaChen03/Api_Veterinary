@@ -21,7 +21,7 @@ const Appointment = connection.define("Appointment", {
 });
 
 console.log(Appointment === connection.models.Appointment); // true
-
+///asdfsfaafdf
 try {
   Appointment.sync();
 } catch (e) {
